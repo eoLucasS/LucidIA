@@ -1,0 +1,31 @@
+{
+  "name": "lucidia",
+  "version": "0.1.0",
+  "description": "AI-powered job search command center for the Brazilian market",
+  "author": "Lucas Lopes",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eoLucasS/LucidIA.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "doctor": "node scripts/doctor.mjs",
+    "verify": "node scripts/verify-pipeline.mjs",
+    "normalize": "node scripts/normalize-statuses.mjs",
+    "dedup": "node scripts/dedup-tracker.mjs",
+    "merge": "node scripts/merge-tracker.mjs",
+    "pdf": "node scripts/generate-pdf.mjs",
+    "sync-check": "node scripts/cv-sync-check.mjs",
+    "scan": "node scripts/scan.mjs",
+    "update:check": "node scripts/update-system.mjs check",
+    "update": "node scripts/update-system.mjs apply",
+    "rollback": "node scripts/update-system.mjs rollback"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.1",
+    "playwright": "^1.52.0"
+  }
+}

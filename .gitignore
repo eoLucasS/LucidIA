@@ -1,0 +1,53 @@
+# User data (personal, never committed)
+cv.md
+article-digest.md
+config/profile.yml
+portals.yml
+modes/_profile.md
+data/applications.md
+data/pipeline.md
+data/scan-history.tsv
+data/follow-ups.md
+
+# Generated content (personal output)
+reports/
+output/
+interview-prep/
+!interview-prep/story-bank.template.md
+batch/batch-state.tsv
+batch/tracker-additions/
+!batch/tracker-additions/.gitkeep
+jds/
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Playwright
+/test-results/
+/playwright-report/
+
+# Build
+dist/
+build/
