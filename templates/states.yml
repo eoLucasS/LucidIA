@@ -1,0 +1,80 @@
+# Estados canônicos de candidatura - LucidIA
+# Cada candidatura deve estar em um desses estados.
+# Aliases permitem que o usuário digite em diferentes formas.
+
+estados:
+  - canonical: "Avaliada"
+    description: "Relatório completo, pendente decisão do usuário"
+    aliases:
+      - "avaliada"
+      - "evaluated"
+      - "evaluada"
+    group: "pipeline"
+
+  - canonical: "Aplicada"
+    description: "Candidatura enviada"
+    aliases:
+      - "aplicada"
+      - "applied"
+      - "candidatada"
+      - "enviada"
+    group: "ativa"
+
+  - canonical: "Respondida"
+    description: "Empresa fez contato"
+    aliases:
+      - "respondida"
+      - "responded"
+      - "retorno"
+      - "contato"
+    group: "ativa"
+
+  - canonical: "Entrevista"
+    description: "Processo de entrevista ativo"
+    aliases:
+      - "entrevista"
+      - "interview"
+      - "entrevistando"
+    group: "ativa"
+
+  - canonical: "Oferta"
+    description: "Oferta recebida"
+    aliases:
+      - "oferta"
+      - "offer"
+      - "proposta"
+    group: "resultado"
+
+  - canonical: "Rejeitada"
+    description: "Empresa rejeitou o candidato"
+    aliases:
+      - "rejeitada"
+      - "rejected"
+      - "negativa"
+      - "recusada"
+    group: "resultado"
+
+  - canonical: "Descartada"
+    description: "Candidato desistiu ou vaga fechou"
+    aliases:
+      - "descartada"
+      - "discarded"
+      - "desistência"
+      - "fechada"
+      - "duplicada"
+    group: "resultado"
+
+  - canonical: "SKIP"
+    description: "Candidato decidiu não se candidatar"
+    aliases:
+      - "skip"
+      - "pular"
+      - "ignorar"
+      - "não aplicar"
+    group: "pipeline"
+
+# Grupos para dashboard
+grupos:
+  pipeline: "Vagas em avaliação"
+  ativa: "Candidaturas ativas"
+  resultado: "Resultados finais"

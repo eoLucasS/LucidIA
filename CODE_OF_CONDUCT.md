@@ -1,31 +1,31 @@
-# Codigo de Conduta
+# Código de Conduta
 
 ## Nosso Compromisso
 
-LucidIA existe porque procurar emprego e dificil, especialmente no Brasil. Estamos construindo essa ferramenta para ajudar pessoas, e esperamos que todos os envolvidos no projeto tratem os outros com a mesma empatia que motiva nosso trabalho.
+LucidIA existe porque procurar emprego é difícil, especialmente no Brasil. Estamos construindo essa ferramenta para ajudar pessoas, e esperamos que todos os envolvidos no projeto tratem os outros com a mesma empatia que motiva nosso trabalho.
 
-Nos comprometemos a tornar a participacao neste projeto uma experiencia livre de assedio para todos, independente de idade, corpo, deficiencia, etnia, identidade e expressao de genero, nivel de experiencia, educacao, condicao socioeconomica, nacionalidade, aparencia pessoal, raca, religiao ou identidade e orientacao sexual.
+Nos comprometemos a tornar a participação neste projeto uma experiência livre de assédio para todos, independente de idade, corpo, deficiência, etnia, identidade e expressão de gênero, nível de experiência, educação, condição socioeconômica, nacionalidade, aparência pessoal, raça, religião ou identidade e orientação sexual.
 
-## Nossos Padroes
+## Nossos Padrões
 
 **Comportamento positivo inclui:**
 
 - Usar linguagem acolhedora e inclusiva
-- Respeitar pontos de vista e experiencias diferentes
-- Aceitar criticas construtivas com elegancia
-- Focar no que e melhor para a comunidade
+- Respeitar pontos de vista e experiências diferentes
+- Aceitar críticas construtivas com elegância
+- Focar no que é melhor para a comunidade
 - Demonstrar empatia com outros membros da comunidade
 
-**Comportamento inaceitavel inclui:**
+**Comportamento inaceitável inclui:**
 
-- Assedio, trollagem ou comentarios depreciativos
-- Publicar informacoes privadas de outros sem consentimento
+- Assédio, trollagem ou comentários depreciativos
+- Publicar informações privadas de outros sem consentimento
 - Qualquer conduta que seria inadequada em um ambiente profissional
 
-## Aplicacao
+## Aplicação
 
-Casos de comportamento inaceitavel podem ser reportados entrando em contato com o mantenedor do projeto via [GitHub](https://github.com/eoLucasS). Todas as reclamacoes serao analisadas e investigadas.
+Casos de comportamento inaceitável podem ser reportados entrando em contato com o mantenedor do projeto via [GitHub](https://github.com/eoLucasS). Todas as reclamações serão analisadas e investigadas.
 
-## Atribuicao
+## Atribuição
 
-Este Codigo de Conduta e adaptado do [Contributor Covenant](https://www.contributor-covenant.org/), versao 2.1.
+Este Código de Conduta é adaptado do [Contributor Covenant](https://www.contributor-covenant.org/), versão 2.1.

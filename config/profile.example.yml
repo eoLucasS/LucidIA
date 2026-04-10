@@ -1,0 +1,52 @@
+# Perfil do Candidato - LucidIA
+# Copie este arquivo para config/profile.yml e preencha com seus dados.
+
+candidato:
+  nome: "Seu Nome Completo"
+  email: "seu.email@exemplo.com"
+  telefone: "+55 11 99999-9999"
+  linkedin: "https://linkedin.com/in/seu-perfil"
+  github: "https://github.com/seu-usuario"
+  portfolio: ""  # URL do portfolio, se houver
+  cidade: "São Paulo"
+  estado: "SP"
+  pais: "Brasil"
+  timezone: "America/Sao_Paulo"
+
+objetivos:
+  cargos_alvo:
+    - "Backend Engineer Sênior"
+    - "Tech Lead"
+  arquetipos:
+    - "backend"
+    - "tech-lead"
+  senioridade_minima: "senior"  # junior, pleno, senior, staff, lead, principal
+
+compensacao:
+  regime_preferido: "ambos"  # clt, pj, ambos
+  clt_minimo_bruto: 15000    # R$ bruto mensal
+  pj_minimo_mensal: 22000    # R$ faturamento mensal
+  aceita_negociar: true
+  moeda: "BRL"
+
+localizacao:
+  aceita_remoto: true
+  aceita_hibrido: true
+  aceita_presencial: false
+  cidades_aceitas:
+    - "São Paulo"
+    - "Remoto"
+  disposicao_mudanca: false
+
+idiomas:
+  portugues: "nativo"
+  ingles: "avançado"  # basico, intermediario, avancado, fluente, nativo
+
+# Opcional: ID do design Canva para currículo visual
+# canva_resume_design_id: ""
+
+# Idioma dos modos (diretório dentro de modes/)
+# Padrão: raiz de modes/ (PT-BR)
+# Para outros idiomas: "en", "es", etc (quando disponíveis)
+# language:
+#   modes_dir: ""
