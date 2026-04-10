@@ -12,10 +12,10 @@ data/follow-ups.md
 # Generated content (personal output)
 reports/
 output/
-interview-prep/
+interview-prep/*
 !interview-prep/story-bank.template.md
 batch/batch-state.tsv
-batch/tracker-additions/
+batch/tracker-additions/*
 !batch/tracker-additions/.gitkeep
 jds/
 

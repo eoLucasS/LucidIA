@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{NAME}} - Currículo</title>
+  <style>
+    /* Self-hosted fonts - place files in /fonts directory */
+    @font-face {
+      font-family: 'SpaceGrotesk';
+      src: url('../fonts/SpaceGrotesk-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'DMSans';
+      src: url('../fonts/DMSans-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'DMSans';
+      src: url('../fonts/DMSans-Medium.woff2') format('woff2');
+      font-weight: 500;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'DMSans';
+      src: url('../fonts/DMSans-Bold.woff2') format('woff2');
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    /* Reset and base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DMSans', 'Segoe UI', Roboto, sans-serif;
+      font-size: 10pt;
+      line-height: 1.45;
+      color: #1a1a2e;
+      background: #ffffff;
+      padding: 0.6in;
+    }
+
+    /* Single column layout - ATS compliant */
+    .container {
+      max-width: 100%;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 16px;
+      border-bottom: 2px solid #0891b2;
+      padding-bottom: 12px;
+    }
+
+    .header h1 {
+      font-family: 'SpaceGrotesk', 'Segoe UI', sans-serif;
+      font-size: 20pt;
+      font-weight: 700;
+      color: #0891b2;
+      margin-bottom: 4px;
+      letter-spacing: -0.5px;
+    }
+
+    .header .contact {
+      font-size: 9pt;
+      color: #4a4a6a;
+      line-height: 1.6;
+    }
+
+    .header .contact a {
+      color: #0891b2;
+      text-decoration: none;
+    }
+
+    /* Section headers */
+    h2 {
+      font-family: 'SpaceGrotesk', 'Segoe UI', sans-serif;
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0891b2;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 3px;
+      margin-top: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* Professional summary */
+    .summary {
+      font-size: 10pt;
+      color: #2d2d4a;
+      margin-bottom: 4px;
+      line-height: 1.5;
+    }
+
+    /* Competency grid */
+    .competencies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .competency-tag {
+      background: #f0fdfa;
+      border: 1px solid #0891b2;
+      color: #0891b2;
+      font-size: 8.5pt;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+
+    /* Experience entries */
+    .experience-entry {
+      margin-bottom: 10px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .experience-header h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .experience-header .date {
+      font-size: 9pt;
+      color: #6b7280;
+      white-space: nowrap;
+    }
+
+    .experience-company {
+      font-size: 9.5pt;
+      color: #4a4a6a;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+
+    .experience-bullets {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .experience-bullets li {
+      font-size: 9.5pt;
+      line-height: 1.45;
+      margin-bottom: 2px;
+      padding-left: 12px;
+      position: relative;
+    }
+
+    .experience-bullets li::before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      color: #0891b2;
+      font-weight: 700;
+    }
+
+    /* Projects */
+    .project-entry {
+      margin-bottom: 8px;
+    }
+
+    .project-entry h3 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #1a1a2e;
+      display: inline;
+    }
+
+    .project-entry .tech {
+      font-size: 8.5pt;
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    .project-entry p {
+      font-size: 9.5pt;
+      margin-top: 2px;
+    }
+
+    /* Education and certifications */
+    .education-entry, .cert-entry {
+      margin-bottom: 4px;
+    }
+
+    .education-entry h3, .cert-entry h3 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #1a1a2e;
+      display: inline;
+    }
+
+    .education-entry .institution, .cert-entry .issuer {
+      font-size: 9.5pt;
+      color: #4a4a6a;
+    }
+
+    /* Languages */
+    .languages {
+      font-size: 9.5pt;
+      line-height: 1.6;
+    }
+
+    /* Skills section (fallback if no competency grid) */
+    .skills-list {
+      font-size: 9.5pt;
+      line-height: 1.6;
+    }
+
+    /* Print optimization */
+    @media print {
+      body {
+        padding: 0.6in;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .container {
+        page-break-inside: avoid;
+      }
+
+      h2 {
+        page-break-after: avoid;
+      }
+
+      .experience-entry {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>{{NAME}}</h1>
+      <div class="contact">
+        {{EMAIL}} | {{PHONE}} | {{LOCATION}}<br>
+        {{LINKEDIN}} {{GITHUB}} {{PORTFOLIO}}
+      </div>
+    </div>
+
+    <!-- Professional Summary -->
+    <h2>Resumo Profissional</h2>
+    <p class="summary">{{SUMMARY_TEXT}}</p>
+
+    <!-- Core Competencies -->
+    <h2>Competências</h2>
+    <div class="competencies">
+      {{COMPETENCY_TAGS}}
+      <!-- Example: <span class="competency-tag">Python</span> -->
+    </div>
+
+    <!-- Work Experience -->
+    <h2>Experiência Profissional</h2>
+    {{EXPERIENCE_ENTRIES}}
+    <!--
+    <div class="experience-entry">
+      <div class="experience-header">
+        <h3>Cargo</h3>
+        <span class="date">Jan 2022 - Atual</span>
+      </div>
+      <div class="experience-company">Empresa - Cidade, Estado</div>
+      <ul class="experience-bullets">
+        <li>Conquista quantificável com métricas e impacto</li>
+        <li>Outra conquista relevante para a vaga</li>
+      </ul>
+    </div>
+    -->
+
+    <!-- Projects -->
+    <h2>Projetos</h2>
+    {{PROJECT_ENTRIES}}
+    <!--
+    <div class="project-entry">
+      <h3>Nome do Projeto</h3> <span class="tech">Python, AWS, Docker</span>
+      <p>Descrição breve com métricas de resultado</p>
+    </div>
+    -->
+
+    <!-- Education -->
+    <h2>Educação</h2>
+    {{EDUCATION_ENTRIES}}
+    <!--
+    <div class="education-entry">
+      <h3>Bacharelado em Ciência da Computação</h3>
+      <div class="institution">Universidade - 2018</div>
+    </div>
+    -->
+
+    <!-- Certifications -->
+    <h2>Certificações</h2>
+    {{CERTIFICATION_ENTRIES}}
+    <!--
+    <div class="cert-entry">
+      <h3>AWS Solutions Architect Associate</h3>
+      <div class="issuer">Amazon Web Services - 2024</div>
+    </div>
+    -->
+
+    <!-- Languages -->
+    <h2>Idiomas</h2>
+    <div class="languages">
+      {{LANGUAGES}}
+      <!-- Example: Português (Nativo) | Inglês (Avançado) | Espanhol (Básico) -->
+    </div>
+
+  </div>
+</body>
+</html>
