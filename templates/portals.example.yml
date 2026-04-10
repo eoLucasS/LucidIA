@@ -1,0 +1,188 @@
+# Configuração de Portais - LucidIA
+# Copie para portals.yml na raiz do projeto e customize.
+
+# Filtro de títulos para o scanner
+title_filter:
+  # Pelo menos 1 keyword positivo deve estar presente no título
+  positive:
+    - "engineer"
+    - "developer"
+    - "desenvolvedor"
+    - "backend"
+    - "frontend"
+    - "full stack"
+    - "fullstack"
+    - "devops"
+    - "sre"
+    - "platform"
+    - "data engineer"
+    - "tech lead"
+    - "software"
+    - "arquiteto"
+    - "architect"
+
+  # Se qualquer keyword negativo estiver presente, a vaga é descartada
+  negative:
+    - "estágio"
+    - "intern"
+    - "aprendiz"
+    - "trainee"
+    - "vendas"
+    - "sales"
+    - "marketing"
+    - "designer"
+    - "product manager"
+    - "recruiter"
+    - "analista de suporte"
+    - "helpdesk"
+
+  # Boost de senioridade (prioriza mas não bloqueia)
+  seniority_boost:
+    - "senior"
+    - "sênior"
+    - "pleno"
+    - "staff"
+    - "lead"
+    - "principal"
+
+# Empresas monitoradas
+# enabled: true/false para ativar/desativar sem remover
+tracked_companies:
+
+  # Fintechs brasileiras
+  - name: "Nubank"
+    careers_url: "https://nubank.com.br/carreiras"
+    greenhouse_id: "nubank"
+    enabled: true
+
+  - name: "Stone"
+    careers_url: "https://www.stone.com.br/carreiras"
+    enabled: true
+
+  - name: "PagSeguro"
+    careers_url: "https://pagseguro.uol.com.br/carreiras"
+    enabled: true
+
+  - name: "C6 Bank"
+    careers_url: "https://www.c6bank.com.br/carreiras"
+    enabled: true
+
+  - name: "Inter"
+    careers_url: "https://www.bancointer.com.br/carreiras"
+    enabled: true
+
+  - name: "Creditas"
+    careers_url: "https://www.creditas.com/carreiras"
+    greenhouse_id: "creditas"
+    enabled: true
+
+  - name: "Neon"
+    careers_url: "https://neon.com.br/carreiras"
+    enabled: true
+
+  # Big techs com operação no Brasil
+  - name: "iFood"
+    careers_url: "https://carreiras.ifood.com.br"
+    enabled: true
+
+  - name: "Mercado Livre"
+    careers_url: "https://careers-meli.mercadolibre.com"
+    enabled: true
+
+  - name: "TOTVS"
+    careers_url: "https://www.totvs.com/carreiras"
+    enabled: true
+
+  - name: "Locaweb"
+    careers_url: "https://www.locaweb.com.br/carreiras"
+    enabled: true
+
+  - name: "Vtex"
+    careers_url: "https://careers.vtex.com"
+    greenhouse_id: "vtex"
+    enabled: true
+
+  - name: "RD Station"
+    careers_url: "https://www.rdstation.com/carreiras"
+    enabled: true
+
+  - name: "Hotmart"
+    careers_url: "https://hotmart.com/pt-BR/carreiras"
+    enabled: true
+
+  - name: "PicPay"
+    careers_url: "https://picpay.com/carreiras"
+    enabled: true
+
+  # Multinacionais com escritório no Brasil
+  - name: "Thoughtworks"
+    careers_url: "https://www.thoughtworks.com/pt-br/careers"
+    enabled: true
+
+  - name: "CI&T"
+    careers_url: "https://ciandt.com/br/carreiras"
+    enabled: true
+
+  - name: "Globo"
+    careers_url: "https://vfrh01.vagas.com.br/PagIntCandSolicitacaoVaga.asp?v=1"
+    enabled: true
+
+  - name: "Luizalabs"
+    careers_url: "https://carreiras.magazineluiza.com.br"
+    enabled: true
+
+  - name: "Itaú"
+    careers_url: "https://trabalheconosco.vagas.com.br/itau"
+    enabled: true
+
+  - name: "Ambev Tech"
+    careers_url: "https://www.ambevtech.com.br"
+    enabled: true
+
+  - name: "Loft"
+    careers_url: "https://www.loft.com.br/carreiras"
+    greenhouse_id: "loft42"
+    enabled: true
+
+  - name: "Dock"
+    careers_url: "https://dock.tech/carreiras"
+    enabled: true
+
+  - name: "Zup Innovation"
+    careers_url: "https://www.zup.com.br/carreiras"
+    enabled: true
+
+  - name: "Wildlife Studios"
+    careers_url: "https://wildlifestudios.com/careers"
+    greenhouse_id: "wildlifestudios"
+    enabled: true
+
+# Queries de busca para descoberta ampla
+# Executadas via WebSearch no modo scan
+search_queries:
+  # Portais ATS
+  - "site:boards.greenhouse.io brasil OR remote engineer OR developer"
+  - "site:jobs.lever.co brasil OR remote engineer OR developer"
+  - "site:jobs.ashbyhq.com brasil OR remote engineer OR developer"
+  - "site:apply.workable.com brasil engineer OR developer"
+
+  # Plataformas brasileiras
+  - "site:gupy.io vaga desenvolvedor OR engineer remoto"
+  - "site:programathor.com.br vaga desenvolvedor sênior"
+  - "site:gekhunter.com vaga tecnologia"
+  - "site:inhire.app vaga desenvolvedor"
+
+  # LinkedIn
+  - "site:linkedin.com/jobs vaga desenvolvedor brasil remoto"
+
+# APIs diretas (consultadas pelo scanner sem usar tokens do Claude)
+api_endpoints:
+  greenhouse:
+    - "https://boards-api.greenhouse.io/v1/boards/nubank/jobs"
+    - "https://boards-api.greenhouse.io/v1/boards/creditas/jobs"
+    - "https://boards-api.greenhouse.io/v1/boards/vtex/jobs"
+    - "https://boards-api.greenhouse.io/v1/boards/loft42/jobs"
+    - "https://boards-api.greenhouse.io/v1/boards/wildlifestudios/jobs"
+
+# Vagas para ignorar (URLs já vistas e descartadas manualmente)
+denylist: []
